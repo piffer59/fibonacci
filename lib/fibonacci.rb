@@ -5,15 +5,13 @@
 # ....
 # e.g. 6th fibonacci number is 8
 
-# Time complexity: ?
-# Space complexity: ?
+# Time complexity: O(n), where n is the number of fibonacci numbers
+# Space complexity: O(1), only additional space is for a few variables, which are constant.
 def fibonacci(n)
   num0 = 0
   num1 = 1
   sum = 0
 
-  # if n == 0
-  #   return num0
   if n == 1
     return num1
   elsif n == nil || n < 0
