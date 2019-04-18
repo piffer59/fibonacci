@@ -8,5 +8,22 @@
 # Time complexity: ?
 # Space complexity: ?
 def fibonacci(n)
-  raise NotImplementedError
+  num0 = 0
+  num1 = 1
+  sum = 0
+
+  # if n == 0
+  #   return num0
+  if n == 1
+    return num1
+  elsif n == nil || n < 0
+    raise ArgumentError, "n cannot be nil or negative"
+  else
+    (n - 1).times do
+      sum = num0 + num1
+      num0 = num1
+      num1 = sum
+    end
+  end
+  return sum
 end
